@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 04</title>
+    <style>
+        body {
+            background-color:#0efafa;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size:14pt;
+            text-indent: 15px;
+        }
+        h1{
+            color:white;
+            font-size:23pt;
+            text-shadow:2px 2px 2px black;
+            margin-bottom: 0px;
+        }
+        h2 {
+            color:yellow;
+            font-size: 16pt;
+            text-shadow: 2px 2px 2px black;
+            margin-top:0px;
+        }
+        header { 
+            background-color:rgb(19, 255, 164);
+            padding:1px 0px 2px 25px;
+            width: 500px;
+            height:85px;
+            margin-top: 15px;
+            margin-bottom: 20px;
+            box-shadow:5px 5px 5px black;            
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <h1>Aula 06!</h1>
+    <h2>Partiu Aprender JavaScrpt </h2>
+    </header>
+    <script>
+        var nome = window.prompt('Qual é seu nome?');
+        document.write('Olá ' + nome + '. Seu nome tem ' +nome.length + ' letras. <br>' ); 
+        document.write('Seu nome em MAIUSCULO ' + nome.toUpperCase ()+ '<br>');
+        document.write('Seu nome em minusculo ' + nome.toLowerCase());
+    </script>
+</body>
+</html>
