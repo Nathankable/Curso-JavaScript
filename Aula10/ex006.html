@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 06</title>
+    <link rel="stylesheet" type="text/css" href="../estilo.css"/>
+    <style>
+        div#area {
+            font-family: Arial, Helvetica, sans-serif;
+            background: rgb(42, 139 ,42);
+            color:white;
+            width:200px;
+            height: 200px;
+            line-height:200px;
+            text-align:center;
+            border:8px solid rgba(125, 223, 125, 0.26)
+        }
+    </style>
+</head>
+<body>
+    <header id = "ex06">
+        <h1>Aprendendo eventos no JavaScript</h1>
+        <h2>Evento 01!</h2>
+    </header>
+    <div id="area">
+        Interaja...
+    </div>
+
+    <script>
+        var a = document.getElementById('area');
+        a.addEventListener('click' , clicar)
+        a.addEventListener ('mouseenter' , entrar)
+        a.adEventListener ('mouseout' , sair)
+
+        function clicar() {
+            a.innerText = 'Clicou !!!'
+            a.style.background = 'red'
+        }
+
+        function entrar() {
+            a.innerText = 'Entrou !!!'
+        }
+
+        function sair ( ) {
+            a.innerText = 'Saiu !!!'
+        }
+    </script>
+</body>
+</html>
