@@ -31,7 +31,7 @@
         var a = document.getElementById('area');
         a.addEventListener('click' , clicar)
         a.addEventListener ('mouseenter' , entrar)
-        a.adEventListener ('mouseout' , sair)
+        a.addEventListener ('mouseout' , sair)
 
         function clicar() {
             a.innerText = 'Clicou !!!'
@@ -42,8 +42,9 @@
             a.innerText = 'Entrou !!!'
         }
 
-        function sair ( ) {
+        function sair( ) {
             a.innerText = 'Saiu !!!'
+            a.style.background = 'green'
         }
     </script>
 </body>

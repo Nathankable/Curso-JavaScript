@@ -6,28 +6,64 @@ body {
     font-size:14pt;
     text-indent: 15px;
 }
+
+senction#corpo{
+    display:block;
+    background-color:white;
+    padding-top:10px;
+    padding-bottom:20px;
+    margin-bottom:25px;
+    width:500px;
+    border:2px solid black;
+    box-shadow:2px 2px 2px black;
+}
+
+footer {
+    border-top:2px solid black;
+    width: 500px;
+    text-align:center;
+}
+
 h1{
     color:white;
     font-size:23pt;
     text-shadow:2px 2px 2px black;
     margin-bottom: 0px;
 }
+
 h2 {
     color:yellow;
     font-size: 16pt;
     text-shadow: 2px 2px 2px black;
     margin-top:0px;
 }
-header { 
-    background-color:rgb(19, 255, 164);
-    padding:1px 0px 2px 25px;
-    width: 500px;
-    height:85px;
-    margin-top: 15px;
-    margin-bottom: 20px;
-    box-shadow:5px 5px 5px black;            
+
+h3 {
+    font-family:Arial, Helvetica, sans-serif;
+    color:rgb(35, 103, 250);
+    text-shadow:0px 0px 0px rgb(0, 0, 0);
+    text-decoration: underline;
+    background-color:rgba(255, 255, 255, 0.596);
+    width:500px;
+    height:35px;
+    padding-top:4px;
+    border:2px solid rgba(37, 37, 223, 0.212);
+    box-shadow: 4px 4px 4px rgb(59, 157, 248);
 }
 
+header { 
+    display:block;
+    background-color:rgb(19, 255, 164);
+    padding:px 0px 0px 25px;
+    width: 500px;
+    height:75px;
+    margin-top: 25px;
+    margin-bottom: 60px;
+    box-shadow:5px 5px 5px black;
+    text;           
+}
+
+/* Aula 06 */
 header#ex06 {
     background-color:rgb(19, 255, 164);
     padding:1px 0px 2px 25px;
@@ -36,4 +72,14 @@ header#ex06 {
     margin-top: 15px;
     margin-bottom: 20px;
     box-shadow:5px 5px 5px black;   
+}
+
+/* Aula 10 */
+input#txtn1, input#txtn2 {
+    width: 100px;
+}
+
+div#res {
+    margin-top: 15px;
+    text-shadow: 5px 2px 6px white;
 }
