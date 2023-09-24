@@ -59,8 +59,7 @@ header {
     height:75px;
     margin-top: 25px;
     margin-bottom: 60px;
-    box-shadow:5px 5px 5px black;
-    text;           
+    box-shadow:5px 5px 5px black;           
 }
 
 /* Aula 06 */
@@ -93,4 +92,61 @@ div#detranlogo{
     width:500px;
     height:270px;
     padding:10px;
+}
+
+/*Aula 12*/
+header#ex11{
+    display:block;
+    background-color:rgb(19, 255, 164);
+    padding:px 0px 0px 25px;
+    width: 600px;
+    height:75px;
+    margin-top: 25px;
+    margin-bottom: 60px;
+    margin-left:5%;
+    box-shadow:5px 5px 5px black;
+}
+
+h3#hex11{
+    font-family:Arial, Helvetica, sans-serif;
+    color:rgb(35, 103, 250);
+    text-shadow:0px 0px 0px rgb(0, 0, 0);
+    text-decoration: underline;
+    background-color:rgba(255, 255, 255, 0.596);
+    width:600px;
+    height:35px;
+    padding-top:4px;
+    border:2px solid rgba(37, 37, 223, 0.212);
+    box-shadow: 4px 4px 4px rgb(59, 157, 248);
+}
+
+div#dvex11 {
+    display:block;
+    background-color:white;
+    width:580px;
+    height:200px;
+    padding:5px 0px 0px 20px;
+    border:3px solid #606060;
+}
+
+senction#senc11 {
+    display: block;
+    float:left;
+    width:620px;
+    margin-left:5%;
+}
+
+aside#sd11{
+    float:right;
+    width:500px;
+    margin-right:5%;
+}
+
+div#dvsd{
+    display: block;
+    background-color:white;
+    padding:5px;
+    width:490px;
+    height:180px;
+    border:3px solid #606060;
 }

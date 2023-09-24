@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 11</title>
+    <link rel="stylesheet" type="text/css" href="../estilo.css"/>
+    <link rel="icon" type="img/png" href="../icon-js.png"/>
+</head>
+<body>
+    <header id="ex11">
+        <h1>Aprendendo Condição em JavaScript</h1>
+        <h2>Aula 12!</h2>
+    </header>
+    <senction id="senc11">
+    <h3 id="hex11">Exemplo: Poder de Voto.</h3>
+    <div id="dvex11">
+    <p>Insira a sua idade e clique em "Verificar" para dar o resultado.</p>
+    <input type="number" name="idade1" id="idade1" max="115" />
+    <input type="button" value="Verificar" id="btidd" onclick="verIdade()"/>
+        <div id="res1">
+
+        </div>
+    </div>
+    </senction>
+    <aside id="sd11">
+        <h3>Exemplo - Nacionalidade</h3>
+        <div id="dvsd">
+        <p>Selecione qual país você nasceu.</p>
+        <label for="PaisL">Selecione aqui.</label>
+        <select  id="PaisL" name="PaisL" type="text">
+            <option value="Brasil">Brasil</option>
+            <oprion value="EUA">EUA</oprion>
+            <option value="Canadá">Canadá</option>
+            <option value="França">França</option>
+            <option value="Colombia">Colombia</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Peru">Peru</option>
+        </select>
+        <input type="button" value="Enviar" onclick="enviarPais()"/>
+        <div id="res2">
+
+        </div>
+    </aside>
+</div>
+    <script>
+        function verIdade() {
+            var idade = document.querySelector('input#idade1');
+            var res1 = document.querySelector('div#res1');
+            var res1c = Number(idade.value);
+            res1.innerHTML = `Sua idade é de ${res1c} anos.`
+            if (res1c < 16){
+                res1.innerHTML += `<p>Você <strong>NÃO  </strong> tem direito de Votar</p>`
+            } else if (res1c >=16 && res1c < 18 || res1c >= 65) {
+                res1.innerHTML += '<p>O seu direito de voto é <strong>OPICIONAL</strong></p>'
+             } else {
+                res1.innerHTML += '<p>O seu direito de voto é <strong>OBRIGATÓRIO</strong></p>'
+                 }   
+        }
+        function call(){
+            document.addEventListener("keypress", function(e){
+                if (e.key === "Enter") {
+                    document.querySelector("#btidd").click();
+                }
+            }) 
+        }
+    </script>
+    
+    <script>
+        function enviarPais(){
+            var res2 = document.querySelector('div#res2');
+            var paisRes = document.querySelector("select#PaisL");
+            var paiselect = String(paisRes.value);
+            res2.innerHTML = `<p>Seu país de origem é ${paiselect}</p>`
+            if (paiselect == 'Brasil'){
+                res2.innerHTML += `<p>Nacionalidade: <strong>brasileira</strong></p>`
+            } else {
+                res2.innerHTML += `<p>Nacionalidade: <strong>estrangeira</strong></p>`
+            }
+        }
+    </script>
+</body>
+</html>
