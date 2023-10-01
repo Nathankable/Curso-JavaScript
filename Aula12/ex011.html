@@ -6,27 +6,98 @@
     <title>Exemplo 11</title>
     <link rel="stylesheet" type="text/css" href="../estilo.css"/>
     <link rel="icon" type="img/png" href="../icon-js.png"/>
+
+    <script type="text/javascript">
+
+function time()
+{
+today=new Date();
+h=today.getHours();
+m=today.getMinutes();
+s=today.getSeconds();
+var boa = document.querySelector('div#Boa');
+txtid = document.getElementById('hora');
+var txtSem = document.getElementById('Semana');
+var diaSem = today.getDay();
+var Semana = ''
+var segundos = ''
+var minutos = ''
+var horas = ''
+if(s <= 9){
+      segundos = '0';
+} 
+if(m <= 9){
+    minutos = '0';
+}
+if(h <= 9){
+    horas = '0';
+}
+
+switch(diaSem) {
+    case 0:
+        Semana = 'Domingo'
+        break
+    case 1:
+        Semana = 'Segunda-Feira'
+        break
+    case 2:
+        Semana = 'Terça-Feira'
+        break
+    case 3:
+        Semana = 'Quarta-Feira'
+        break
+    case 4: 
+        Semana = 'Quinta-Feira'
+        break
+    case 5: 
+        Semana = 'Sexta-Feira'
+        break
+    case 6: 
+        Semana = 'Sábado'
+        break
+}
+
+txtid.innerHTML = Semana+",  " + horas+h+":"+minutos+m+":"+segundos+s;
+setTimeout('time()',500);
+    boa.innerHTML = "Aula 12! -- "
+if(h < 12){
+    boa.innerHTML += "Bom Dia"
+} else if(h <=18){
+    boa.innerHTML += "Boa Tarde"
+} else if(h < 6){
+    boa.innerHTML += "Boa Madrugada"
+} else {
+    boa.innerHTML += "Boa Noite"
+    }
+}
+var boa = document.querySelector('div#Boa');
+
+</script>
 </head>
-<body>
+<body onload="time()">
     <header id="ex11">
         <h1>Aprendendo Condição em JavaScript</h1>
-        <h2>Aula 12!</h2>
+        <h2><div id="hora">Aula 12! </div><div id="Boa"></div></h2>
     </header>
     <senction id="senc11">
     <h3 id="hex11">Exemplo: Poder de Voto.</h3>
     <div id="dvex11">
-    <p>Insira a sua idade e clique em "Verificar" para dar o resultado.</p>
+    <p id="inserir">Insira a sua idade e clique em "Verificar" para dar o resultado.</p>
+    <div id="centerIn">
     <input type="number" name="idade1" id="idade1" max="115" />
     <input type="button" value="Verificar" id="btidd" onclick="verIdade()"/>
+    </div>
         <div id="res1">
 
         </div>
     </div>
     </senction>
+
     <aside id="sd11">
         <h3>Exemplo - Nacionalidade</h3>
         <div id="dvsd">
-        <p>Selecione qual país você nasceu.</p>
+        <p id="inserir">Selecione qual país você nasceu.</p>
+        <div id="centerIn">
         <label for="PaisL">Selecione aqui.</label>
         <select  id="PaisL" name="PaisL" type="text">
             <option value="Brasil">Brasil</option>
@@ -38,6 +109,7 @@
             <option value="Peru">Peru</option>
         </select>
         <input type="button" value="Enviar" onclick="enviarPais()"/>
+        </div>
         <div id="res2">
 
         </div>
@@ -48,8 +120,8 @@
             var idade = document.querySelector('input#idade1');
             var res1 = document.querySelector('div#res1');
             var res1c = Number(idade.value);
-            res1.innerHTML = `Sua idade é de ${res1c} anos.`
-            if (res1c < 16){
+            res1.innerHTML = `<p>Sua idade é de ${res1c} anos.</p>`
+            if(res1c < 16){
                 res1.innerHTML += `<p>Você <strong>NÃO  </strong> tem direito de Votar</p>`
             } else if (res1c >=16 && res1c < 18 || res1c >= 65) {
                 res1.innerHTML += '<p>O seu direito de voto é <strong>OPICIONAL</strong></p>'
